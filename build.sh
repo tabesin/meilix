@@ -134,6 +134,28 @@ apt-get install -f
 #screen-dimming turns off always
 echo -ne "\033[9;0]" >> /etc/issue
 
+# Install Google-Chrome
+wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+sh -c 'echo "deb https://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
+apt-get update
+apt-get install google-chrome-stable
+
+#Install vlc
+apt-get -q -y install vlc
+
+#Instal dropbox
+apt-get -q -y install nautilus-dropbox
+nautilus --quit
+
+#Install git
+apt-get -q -y install git
+
+#install icons for pcmanfm
+apt-get -q -y install oxygen-icon-theme
+
+#Install text editor
+apt-get -q -y install gedit
+
 #Google custom ad
 apt-get -q -y --purge install mygoad
 #Install East Asia font
